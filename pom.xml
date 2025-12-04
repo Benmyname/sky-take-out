@@ -125,4 +125,25 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>  <!-- 确保使用 3.13.0 或更高，支持 JDK 23 -->
+                <configuration>
+                    <source>23</source>  <!-- 与 properties 一致 -->
+                    <target>23</target>
+                    <annotationProcessorPaths>  <!-- 添加此块：JDK 23 必需 -->
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
