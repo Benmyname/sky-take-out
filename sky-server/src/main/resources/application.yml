@@ -42,8 +42,20 @@ sky:
     # 设置前端传递过来的令牌名称
     admin-token-name: token
 
+    user-secret-key: itcast
+    # 设置jwt过期时间
+    user-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    user-token-name: authentication
+
+
   ali-oss:
       endpoint: ${sky.ali-oss.endpoint}
       access-key-id: ${sky.ali-oss.access-key-id}
       access-key-secret: ${sky.ali-oss.access-key-secret}
       bucket-name: ${sky.ali-oss.bucket-name}
+
+  wechat:
+    appid:  ${sky.wechat.appid}
+    secret: ${sky.wechat.secret}
+
