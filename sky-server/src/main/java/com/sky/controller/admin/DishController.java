@@ -78,6 +78,7 @@ public class DishController {
 
 //        将所有的菜品缓存数据清理掉，所有以dish_开头的key
         clearCache("dish_*");
+
         return Result.success();
     }
 
@@ -109,6 +110,7 @@ public class DishController {
 
         //将所有的菜品缓存数据清理掉，所有以dish_开头的key
         clearCache("dish_*");
+
 
         return Result.success();
     }
