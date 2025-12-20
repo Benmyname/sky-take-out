@@ -92,4 +92,12 @@ private SetmealMapper setmealMapper;
         List<ShoppingCart> list = shoppingCartMapper.list(shoppingCart);
         return list;
     }
+
+    @Override
+    public void cleanShoppingCart() {
+        //获取当前用户id
+        Long userId = BaseContext.getCurrentId();
+        //根据用户id删除购物车中的所有数据
+        shoppingCartMapper.deleteByUserId(userId);
+    }
 }
