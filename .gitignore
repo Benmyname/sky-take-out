@@ -21,3 +21,5 @@ mvnw.cmd
 *.log
 .DS_Store
 Thumbs.db
+#需要保密的密钥
+sky-server/src/main/resources/application-dev-local.yml
